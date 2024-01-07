@@ -1,4 +1,5 @@
 """When using docker, change some defaults for easier integration"""
+
 from .production import *
 
 # Allow to override settings via the docker run -e
@@ -18,7 +19,7 @@ COMPRESS_STORAGE = 'compressor.storage.GzipCompressorFileStorage'  # generate .g
 
 # Need to different way to get the release, since there is no .git folder to read.
 try:
-    with open(SRC_DIR + '/.docker-git-version') as f:
+    with open(f'{SRC_DIR}/.docker-git-version') as f:
         GIT_VERSION = f.read().strip()
     RAVEN_CONFIG['release'] = GIT_VERSION
 except IOError:
