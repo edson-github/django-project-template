@@ -3,7 +3,7 @@ import sys
 from .defaults import *
 
 
-if sys.version_info[0:2] < (3, 6):
+if sys.version_info[:2] < (3, 6):
     ModuleNotFoundError = ImportError
 
 # Easily allow local settings

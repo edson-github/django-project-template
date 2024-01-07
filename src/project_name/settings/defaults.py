@@ -1,6 +1,7 @@
 """
 The settings for this project.
 """
+
 import logging
 import os
 
@@ -18,11 +19,11 @@ SRC_DIR = str(environ.Path(__file__) - 3)
 ROOT_DIR = str(environ.Path(__file__) - 4)
 
 # Paths
-MEDIA_ROOT = ROOT_DIR + '/web/media/'
+MEDIA_ROOT = f'{ROOT_DIR}/web/media/'
 MEDIA_URL = '/media/'        # Must end with /
 ROOT_URLCONF = '{{ project_name }}.urls'
 
-STATIC_ROOT = ROOT_DIR + '/web/static/'
+STATIC_ROOT = f'{ROOT_DIR}/web/static/'
 STATIC_URL = '/static/'
 
 # --- Locale settings
